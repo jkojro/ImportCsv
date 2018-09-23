@@ -12,5 +12,7 @@ gem 'rails-controller-testing'
 
 gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
 
 gemspec
