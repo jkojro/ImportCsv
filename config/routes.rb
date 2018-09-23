@@ -1,3 +1,5 @@
 Spree::Core::Engine.add_routes do
-  # Add your extension routes here
+  resources :products do
+    collection { post :import}
+  end
 end
