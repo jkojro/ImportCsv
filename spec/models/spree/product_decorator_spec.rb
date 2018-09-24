@@ -4,9 +4,9 @@ describe Spree::Product, type: :model do
   describe ".import" do
 
     # let!(:) {create :shipping_catego(name: "testname", shopping_category_id}
-    let!(:valid_csv_file) {File.new('/Users/januszkojro/Dev/Rails/Spree/spree_csv_upload/spec/fixtures/csv/sample1.csv'
+    let!(:valid_csv_file) {File.newRails.root.join('../fixtures/csv/sample1.csv')
 )}
-    let!(:invalid_csv_file) {File.new('/Users/januszkojro/Dev/Rails/Spree/spree_csv_upload/spec/fixtures/csv/sample.csv'
+    let!(:invalid_csv_file) {File.newRails.root.join('../fixtures/csv/sample.csv')
 )}
 
     it "import csv file with valid data" do
