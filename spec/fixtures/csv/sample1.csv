@@ -1,4 +1,4 @@
 ;name;description;shipping_category_id;price;diferentmethod
-;Ruby on Rails Bag;first product desc;1;3.00;wefwe
-;Spree Bag;second product description;1;9.99;werweqr
+;Ruby on Rails Bag;first product desc;1;;wefwe
+;Spree Bag;second product description;;9.99;werweqr
 ;Spree Tote;test;1;100.00;werwerew
