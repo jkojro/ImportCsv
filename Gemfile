@@ -14,5 +14,8 @@ gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
 gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
+gem 'sidekiq'
+# gem 'sinatra', github: 'sinatra/sinatra'
+
 
 gemspec
