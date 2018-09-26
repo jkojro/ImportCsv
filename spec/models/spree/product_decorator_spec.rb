@@ -7,16 +7,19 @@ describe Spree::Product, type: :model do
     let!(:valid_csv_file) {File.new(Rails.root.join('../fixtures/csv/sample1.csv'))}
     let!(:invalid_csv_file) {File.new(Rails.root.join('../fixtures/csv/sample.csv'))}
 
-    it "import csv file with valid data" do
+    it "import csv file with valid data and send to background job" do
       Spree::ShippingCategory.create!(id: 1, name: 'test_shipname')
       products = Spree::Product.all
 
       described_class.import(valid_csv_file)
 
-      expect(products.count).to eq 3
-      expect(products.last.name).to eq 'Spree Tote'
-      expect(products.first.price).to eq 3.00
-      expect(products[1].description).to eq 'second product description'
+      expect(products.count).to eq 0
+
+      # Creating product's was moved to ImportWorker background job
+
+      # expect(products.last.name).to eq 'Spree Tote'
+      # expect(products.first.price).to eq 3.00
+      # expect(products[1].description).to eq 'second product description'
     end
 
     it "doesn't save invalid data" do
