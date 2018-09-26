@@ -5,21 +5,16 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'spree', github: 'spree/spree', branch: 'master'
-# Provides basic authentication functionality for testing parts of your engine
-gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
+gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 gem 'rails-controller-testing'
-
 gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
-gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
 gem 'sidekiq'
-# gem 'sinatra', github: 'sinatra/sinatra'
+gem 'spree', github: 'spree/spree', branch: 'master'
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
 
 group :test do
   gem 'rspec-sidekiq'
 end
-
 
 gemspec
