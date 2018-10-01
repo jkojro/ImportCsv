@@ -39,5 +39,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'pg', '~> 0.18'
+  s.add_development_dependency 'sidekiq'
   s.add_development_dependency 'simplecov'
 end
