@@ -1,8 +1,8 @@
-
   function csv_validation(inputCSV, required_attributes) {
     inputCSV.onchange = function(event) {
       var files = inputCSV.files;
       var file = files[0];
+      var data;
 
       Papa.parse(file, {
         header: true,
@@ -42,10 +42,10 @@
     var invalid_data = 0;
     var invalid_products = Array.new;
     for(var i = 0; i < values.length; i++) { 
-      for (var j = 0; j < required_attributes.length-1; j++) {
+      for (var j = 0; j < required_attributes.length; j++) {
         if (values[i][required_attributes[j]] === null ) {
           invalid_data++;
         }
       }
     } return invalid_data;
-  } 
+  }
